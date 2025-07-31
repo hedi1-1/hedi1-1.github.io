@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hedi Triki | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #c9d1d9;
+      --accent: #58a6ff;
+    }
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      animation: fadeIn 1.2s ease-in;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInLeft {
+      0% { opacity: 0; transform: translateX(-100px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+      0% { opacity: 0; transform: translateX(100px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #58a6ff33; }
+      to { text-shadow: 0 0 20px #58a6ffcc; }
+    }
+    header {
+      padding: 3rem;
+      text-align: center;
+      animation: slideInLeft 1s ease-out;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: var(--accent);
+      animation: glow 2s infinite alternate;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      opacity: 0;
+      animation: fadeIn 1.4s ease-in forwards;
+      animation-delay: 0.4s;
+    }
+    section {
+      padding: 2rem 4rem;
+      max-width: 900px;
+      margin: 0 auto;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+      animation-delay: 0.8s;
+    }
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+    }
+    .project {
+      margin-bottom: 1.5rem;
+      animation: slideInRight 1s ease-out;
+    }
+    .project:hover {
+      transform: scale(1.05);
+      color: var(--accent);
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+    .skill {
+      background-color: #161b22;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--accent);
+      animation: fadeIn 1s ease-in;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #8b949e;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+      animation-delay: 1.2s;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hedi Triki</h1>
+    <p>Pre-engineering Student • C Programmer • SDL 1.2 Game Developer</p>
+  </header>
+
+  <section>
+    <h2>👋 About Me</h2>
+    <p>
+      I'm a pre-engineering student with a strong interest in low-level development and game design. I specialize in the C programming language and have experience developing 2D games using SDL 1.2. I enjoy building systems that combine performance with creativity.
+    </p>
+  </section>
+
+  <section>
+    <h2>🚀 Projects</h2>
+    <div class="project">
+      <strong>Cursed</strong><br />
+      A retro fantasy 2D platformer built with SDL 1.2. Features joystick support, multiple abilities, a dark atmosphere, and custom animations. This project is part of my learning journey into low-level game development. [GitHub Repo]
+    </div>
+  </section>
+
+  <section>
+    <h2>🧠 Skills</h2>
+    <div class="skills">
+      <div class="skill">C</div>
+      <div class="skill">SDL 1.2</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📬 Contact</h2>
+    <p>
+      Find me on <a href="https://github.com/hedi1-1" target="_blank">GitHub</a> or reach out via issues and PRs.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Hedi Triki — Built with ❤️ in the dark
+  </footer>
+</body>
+</html>
